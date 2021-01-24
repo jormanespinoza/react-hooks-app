@@ -9,10 +9,7 @@ export const Message = () => {
     const {x , y} = coordinates;
 
     useEffect(() => {
-        const mouseMove = (e) => {
-            const coordinates = { x: e.x, y: e.y }
-            setCoordinates(coordinates);
-        }
+        const mouseMove = (e) => setCoordinates({ x: e.x, y: e.y });
 
         window.addEventListener('mousemove', mouseMove);
 
